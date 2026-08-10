@@ -24,8 +24,7 @@ export default function decorate(block) {
 
   const description = descriptionRow?.textContent.trim();
 
-  const playVideoLabel =
-    playVideoRow?.textContent.trim() || 'Play Video';
+  const playVideoLabel = playVideoRow?.textContent.trim() || 'Play Video';
 
   const authoredCta = secondaryCtaRow?.querySelector('a');
 
@@ -52,18 +51,15 @@ export default function decorate(block) {
 
   block.append(backgroundVideo);
 
-
   const overlay = document.createElement('div');
 
   overlay.className = 'video-hero-overlay';
 
   block.append(overlay);
 
-
   const content = document.createElement('div');
 
   content.className = 'video-hero-content';
-
 
   if (eyebrow) {
     const eyebrowElement = document.createElement('p');
@@ -149,7 +145,6 @@ export default function decorate(block) {
   controlButton.addEventListener('click', () => {
     if (backgroundVideo.paused) {
       backgroundVideo.play();
-
       controlLabel.textContent = 'Pause';
       controlIcon.textContent = 'Ⅱ';
     } else {
@@ -164,7 +159,6 @@ export default function decorate(block) {
   const modal = document.createElement('div');
 
   modal.className = 'video-hero-modal';
-
   modal.setAttribute('role', 'dialog');
   modal.setAttribute('aria-modal', 'true');
   modal.setAttribute('aria-label', 'Video');
