@@ -3,599 +3,475 @@
   padding-right: 0 !important;
 }
 
-.video-hero-container > .video-hero-wrapper {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
+.video-hero-wrapper {
+width: 100%;
+max-width: none !important;
+margin: 0 !important;
+padding: 0 !important;
 }
 
-.video-hero-wrapper {
-  width: 100%;
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
+.video-hero-container > .video-hero-wrapper {
+width: 100%;
+max-width: none;
+margin: 0;
+padding: 0;
 }
 
 .video-hero.block {
-  position: relative;
-  width: 100%;
-  min-height: 529px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #101820;
+position: relative;
+width: 100%;
+min-height: 529px;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #101820;
 }
-
-   /* Background Video */
+/* Background Video */
 
 .video-hero.block .video-hero-background {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-  object-position: center;
-
-  border: 0;
+position: absolute;
+inset: 0;
+z-index: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+border: 0;
 }
-
-   /* Video Overlay */
+/* Video Overlay */
 
 .video-hero.block .video-hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-
-  background: rgb(0 0 0 / 18%);
-
-  pointer-events: none;
+position: absolute;
+inset: 0;
+z-index: 1;
+background: rgb(0 0 0 / 18%);
+pointer-events: none;
 }
-
-   /* Hero Content */
+/* Hero Content */
 
 .video-hero.block .video-hero-content {
-  position: relative;
-  z-index: 2;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: min(900px, calc(100% - 48px));
-
-  margin-top: 14px;
-
-  text-align: center;
-  color: #fff;
+position: relative;
+z-index: 2;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: min(900px, calc(100% - 48px));
+margin-top: 14px;
+text-align: center;
+color: #fff;
 }
-
-   /* Eyebrow */
+/* Eyebrow */
 
 .video-hero.block .video-hero-eyebrow {
-  margin: 0 0 16px;
-
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1;
-
-  color: #fff;
+margin: 0 0 16px;
+font-size: 16px;
+font-weight: 400;
+line-height: 1;
+color: #fff;
 }
-
-   /* Heading */
+/* Heading */
 
 .video-hero.block .video-hero-heading {
-  margin: 0;
-  font-family: roboto, sans-serif;
+margin: 0;
+font-family: roboto, sans-serif;
 font-size: 31.5px;
-  /* font-size: clamp(32px, 3vw, 48px); */
-  font-weight: 400 !important;
-  line-height: 1;
-
-  color: #fff;
+/* font-size: clamp(32px, 3vw, 48px); */
+font-weight: 400 !important;
+line-height: 1;
+color: #fff;
 }
-
 /*   Description */
 
 .video-hero.block .video-hero-description {
-  max-width: 850px;
-
-  margin: 18px auto 0;
-
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1;
-
-  color: #fff;
+max-width: 850px;
+margin: 18px auto 0;
+font-size: 16px;
+font-weight: 400;
+line-height: 1;
+color: #fff;
 }
-
 /* Play Video Button */
 
 .video-hero.block .video-hero-play {
-     display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 17px;
-    min-height: 48px;
-    margin-top: 28px;
-    /* padding: 14px 24px; */
-    padding: .6875rem 1.1875rem;
-    border: 1px solid #0672ce;
-    border-radius: 2px;
-    background: #0672ce;
-    color: #fff;
-    font: inherit;
-    font-size: 1rem;
-    /* font-weight: 500; */
-    cursor: pointer;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
-  }
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 17px;
+min-height: 48px;
+margin-top: 28px;
+/* padding: 14px 24px; */
+padding: .6875rem 1.1875rem;
+border: 1px solid #0672ce;
+border-radius: 2px;
+background: #0672ce;
+color: #fff;
+font: inherit;
+font-size: 1rem;
+/* font-weight: 500; */
+cursor: pointer;
+transition: background-color 0.2s ease, border-color 0.2s ease;
+}
 
 .video-hero.block .video-hero-play:hover {
-  background: #0063b8;
-  border-color: #0063b8;
+background: #0063b8;
+border-color: #0063b8;
 }
 
 .video-hero.block .video-hero-play:focus-visible {
-  outline: 3px solid #fff;
-  outline-offset: 3px;
+outline: 3px solid #fff;
+outline-offset: 3px;
 }
-
 /* Play icon */
 
 .video-hero.block .video-hero-play-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 14px;
-  height: 14px;
-
-  border: 1.5px solid currentcolor;
-  border-radius: 50%;
-
-  font-size: 10px;
-  line-height: 1;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 14px;
+height: 14px;
+border: 1.5px solid currentcolor;
+border-radius: 50%;
+font-size: 10px;
+line-height: 1;
 }
-   /* Secondary CTA */
+/* Secondary CTA */
 .video-hero.block .video-hero-secondary-cta {
-     display: inline-flex;
-    align-items: center;
-    gap: 3px;
-    margin-top: 19px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
+display: inline-flex;
+align-items: center;
+gap: 3px;
+margin-top: 19px;
+color: #fff;
+font-size: 16px;
+font-weight: 500;
+text-decoration: none;
 }
 
 .video-hero.block .video-hero-secondary-cta:hover {
-  text-decoration: underline;
+text-decoration: underline;
 }
 
 .video-hero.block .video-hero-secondary-cta::after {
-  content: "→";
-
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 1;
-
-  transition: transform 0.2s ease;
+content: "→";
+font-size: 24px;
+font-weight: 300;
+line-height: 1;
+transition: transform 0.2s ease;
 }
 
 .video-hero.block .video-hero-secondary-cta:hover::after {
-  transform: translateX(4px);
+transform: translateX(4px);
 }
-
-   /* Background Video Play / Pause Control */
+/* Background Video Play / Pause Control */
 
 .video-hero.block .video-hero-control {
-      position: absolute;
-    right: 126px;
-    bottom: 32px;
-    z-index: 3;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    min-height: 48px;
-    padding: 0.6875rem 1.7rem;
-    border: 2px;
-    background: rgb(0 0 0 / 80%);
-    color: #fff;
-    font: inherit;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
+position: absolute;
+right: 126px;
+bottom: 32px;
+z-index: 3;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 14px;
+min-height: 48px;
+padding: 0.6875rem 1.7rem;
+border: 2px;
+background: rgb(0 0 0 / 80%);
+color: #fff;
+font: inherit;
+font-size: 1rem;
+font-weight: 500;
+cursor: pointer;
 }
 
 .video-hero.block .video-hero-control:hover {
-  background: #595757;
+background: #595757;
 }
 
 .video-hero.block .video-hero-control:focus-visible {
-  outline: 3px solid #fff;
-  outline-offset: 3px;
+outline: 3px solid #fff;
+outline-offset: 3px;
 }
 
 .video-hero.block .video-hero-control-icon {
-  font-size: 18px;
+font-size: 18px;
 }
-
-   /* Full Video Modal */
+/* Full Video Modal */
 
 .video-hero-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-
-  display: none;
-
-  width: 100vw;
-  height: 100vh;
-
-  padding: 0;
-  margin: 0;
-
-  background: #000;
+position: fixed;
+inset: 0;
+z-index: 9999;
+display: none;
+width: 100vw;
+height: 100vh;
+padding: 0;
+margin: 0;
+background: #000;
 }
-
 /* Modal open state */
 
 .video-hero-modal.is-open {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+display: flex;
+align-items: center;
+justify-content: center;
 }
-
-   /* Modal Video Wrapper */
+/* Modal Video Wrapper */
 
 .video-hero-modal-content {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 100%;
-
-  margin: 0;
-  padding: 0;
-
-  overflow: hidden;
-
-  background: #000;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background: #000;
 }
-
-   /* Full Video */
+/* Full Video */
 
 .video-hero-modal-video {
-  display: block;
-
-  width: 100%;
-  height: 100%;
-
-  margin: 0;
-  padding: 0;
-
-  object-fit: contain;
-  object-position: center;
-
-  background: #1c1c1c;;
+display: block;
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+object-fit: contain;
+object-position: center;
+background: #1c1c1c;
 }
-
-   /* Modal Close Button */
+/* Modal Close Button */
 
 .video-hero-modal-close {
-  position: absolute;
-
-  top: 33px;
-  right: 32px;
-  z-index: 10;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 32px;
-  height: 32px;
-
-  padding: 0;
-
-  border: 0;
-
-  background: #fff;
-  color: #0672ce;
-
-  font-size: 30px;
-  font-weight: 300;
-  line-height: 1;
-
-  cursor: pointer;
+position: absolute;
+top: 33px;
+right: 32px;
+z-index: 10;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 32px;
+height: 32px;
+padding: 0;
+border: 0;
+background: #fff;
+color: #0672ce;
+font-size: 30px;
+font-weight: 300;
+line-height: 1;
+cursor: pointer;
 }
 
 .video-hero-modal-close:hover {
-  background: #f5f6f7;
+background: #f5f6f7;
 }
 
 .video-hero-modal-close:focus-visible {
-  outline: 3px solid #0672ce;
-  outline-offset: 3px;
+outline: 3px solid #0672ce;
+outline-offset: 3px;
 }
-
 /* Prevent page scrolling while modal is open */
 
 body.video-hero-modal-open {
-  overflow: hidden;
+overflow: hidden;
 }
+/* Tablet */
 
-   /* Tablet */
-
-@media (max-width: 900px) {
-  .video-hero.block {
-    min-height: 550px;
-  }
-
-  .video-hero.block .video-hero-content {
-    width: calc(100% - 48px);
-  }
-
-  .video-hero.block .video-hero-heading {
-    font-size: 36px;
-  }
-
-  .video-hero.block .video-hero-description {
-    max-width: 650px;
-    font-size: 16px;
-  }
-
-  .video-hero.block .video-hero-control {
-    right: 24px;
-    bottom: 24px;
-  }
-
-  .video-hero-modal-close {
-    top: 24px;
-    right: 24px;
-  }
+@media (width <= 900px) {
+.video-hero.block {
+  min-height: 550px;
 }
-
-   /* Mobile */
-
-@media (max-width: 600px) {
-  .video-hero.block {
-    min-height: 500px;
-  }
-
-  .video-hero.block .video-hero-content {
-    width: calc(100% - 32px);
-  }
-
-  .video-hero.block .video-hero-eyebrow {
-    margin-bottom: 12px;
-
-    font-size: 15px;
-  }
-
-  .video-hero.block .video-hero-heading {
-    font-size: 28px;
-    line-height: 1.2;
-  }
-
-  .video-hero.block .video-hero-description {
-    margin-top: 14px;
-
-    font-size: 15px;
-    line-height: 1.4;
-  }
-
-  .video-hero.block .video-hero-play {
-    margin-top: 22px;
-    padding: 12px 18px;
-
-    font-size: 16px;
-  }
-
-  .video-hero.block .video-hero-secondary-cta {
-    margin-top: 18px;
-
-    font-size: 15px;
-  }
-
-  .video-hero.block .video-hero-control {
-    right: 16px;
-    bottom: 16px;
-
-    min-height: 42px;
-
-    padding: 10px 14px;
-
-    font-size: 14px;
-  }
-
-  /* Full-screen video modal */
-
-  .video-hero-modal {
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-  }
-
-  .video-hero-modal-content {
-    width: 100%;
-    height: 100%;
-  }
-
-  .video-hero-modal-video {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-  }
-
-  .video-hero-modal-close {
-    top: 16px;
-    right: 16px;
-
-    width: 42px;
-    height: 42px;
-
-    font-size: 26px;
-  }
+.video-hero.block .video-hero-content {
+width: calc(100% - 48px);
 }
+.video-hero.block .video-hero-heading {
+font-size: 36px;
+}
+.video-hero.block .video-hero-description {
+max-width: 650px;
+font-size: 16px;
+}
+.video-hero.block .video-hero-control {
+right: 24px;
+bottom: 24px;
+}
+.video-hero-modal-close {
+top: 24px;
+right: 24px;
+}
+}
+/* Mobile */
 
-   /* Reduced Motion */
+@media (width <= 600px) {
+.video-hero.block {
+  min-height: 500px;
+}
+.video-hero.block .video-hero-content {
+width: calc(100% - 32px);
+}
+.video-hero.block .video-hero-eyebrow {
+margin-bottom: 12px;
+font-size: 15px;
+}
+.video-hero.block .video-hero-heading {
+font-size: 28px;
+line-height: 1.2;
+}
+.video-hero.block .video-hero-description {
+margin-top: 14px;
+font-size: 15px;
+line-height: 1.4;
+}
+.video-hero.block .video-hero-play {
+margin-top: 22px;
+padding: 12px 18px;
+font-size: 16px;
+}
+.video-hero.block .video-hero-secondary-cta {
+margin-top: 18px;
+font-size: 15px;
+}
+.video-hero.block .video-hero-control {
+right: 16px;
+bottom: 16px;
+min-height: 42px;
+padding: 10px 14px;
+font-size: 14px;
+}
+/* Full-screen video modal */
+.video-hero-modal {
+width: 100vw;
+height: 100vh;
+padding: 0;
+}
+.video-hero-modal-content {
+width: 100%;
+height: 100%;
+}
+.video-hero-modal-video {
+width: 100%;
+height: 100%;
+object-fit: contain;
+}
+.video-hero-modal-close {
+top: 16px;
+right: 16px;
+width: 42px;
+height: 42px;
+font-size: 26px;
+}
+}
+/* Reduced Motion */
 
 @media (prefers-reduced-motion: reduce) {
-  .video-hero.block .video-hero-play,
-  .video-hero.block .video-hero-secondary-cta::after {
-    transition: none;
-  }
+.video-hero.block .video-hero-play,
+.video-hero.block .video-hero-secondary-cta::after {
+  transition: none;
+}
 }
 
-@media (max-width: 600px) {
-  .video-hero.block {
-    min-height: 620px;
-    height: 75vh;
-
-    background: #000;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* Hide background video on mobile */
-  .video-hero.block .video-hero-background {
-    display: none;
-  }
-
-  /* Video is hidden, so overlay isn't needed */
-  .video-hero.block .video-hero-overlay {
-    display: none;
-  }
-
-  .video-hero.block .video-hero-content {
-    position: relative;
-    z-index: 2;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    width: calc(100% - 40px);
-    max-width: 340px;
-
-    margin-top: 26px;
-    padding-bottom: 45px;
-
-    text-align: center;
-  }
-
-  .video-hero.block .video-hero-eyebrow {
-    margin: 0 0 14px;
-
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 1.2;
-
-    color: #fff;
-  }
-
-  .video-hero.block .video-hero-heading {
-    width: 100%;
-    max-width: 330px;
-
-    margin: 0;
-
-    font-family: roboto, sans-serif;
-    font-size: 31px;
-    font-weight: 400 !important;
-    line-height: 1.25;
-
-    color: #fff;
-  }
-
-  .video-hero.block .video-hero-description {
-    width: 100%;
-    max-width: 330px;
-
-    margin: 16px auto 0;
-
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.45;
-
-    color: #fff;
-  }
-
-  .video-hero.block .video-hero-play {
-    min-height: 46px;
-
-    margin-top: 24px;
-    padding: 12px 20px;
-
-    gap: 10px;
-
-    font-size: 16px;
-  }
-
-  .video-hero.block .video-hero-play-icon {
-    width: 18px;
-    height: 18px;
-
-    font-size: 9px;
-  }
-
-  .video-hero.block .video-hero-secondary-cta {
-    margin-top: 22px;
-
-    gap: 4px;
-
-    font-size: 15.5px;
-  }
-
-  .video-hero.block .video-hero-secondary-cta::after {
-    font-size: 20px;
-  }
-
-  /* No background video = no pause/play control */
-  .video-hero.block .video-hero-control {
-    display: none;
-  }
-
-  /* Full video modal still works */
-  .video-hero-modal {
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-  }
-
-  .video-hero-modal-content {
-    width: 100%;
-    height: 100%;
-  }
-
-  .video-hero-modal-video {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-  }
-
-  .video-hero-modal-close {
-    top: 16px;
-    right: 16px;
-
-    width: 42px;
-    height: 42px;
-
-    font-size: 26px;
-  }
+@media (width <= 600px) {
+.video-hero.block {
+  min-height: 620px;
+  height: 75vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Hide background video on mobile */
+.video-hero.block .video-hero-background {
+display: none;
+}
+/* Video is hidden, so overlay isn't needed */
+.video-hero.block .video-hero-overlay {
+display: none;
+}
+.video-hero.block .video-hero-content {
+position: relative;
+z-index: 2;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: calc(100% - 40px);
+max-width: 340px;
+margin-top: 26px;
+padding-bottom: 45px;
+text-align: center;
+}
+.video-hero.block .video-hero-eyebrow {
+margin: 0 0 14px;
+font-size: 17px;
+font-weight: 400;
+line-height: 1.2;
+color: #fff;
+}
+.video-hero.block .video-hero-heading {
+width: 100%;
+max-width: 330px;
+margin: 0;
+font-family: roboto, sans-serif;
+font-size: 31px;
+font-weight: 400 !important;
+line-height: 1.25;
+color: #fff;
+}
+.video-hero.block .video-hero-description {
+width: 100%;
+max-width: 330px;
+margin: 16px auto 0;
+font-size: 16px;
+font-weight: 400;
+line-height: 1.45;
+color: #fff;
+}
+.video-hero.block .video-hero-play {
+min-height: 46px;
+margin-top: 24px;
+padding: 12px 20px;
+gap: 10px;
+font-size: 16px;
+}
+.video-hero.block .video-hero-play-icon {
+width: 18px;
+height: 18px;
+font-size: 9px;
+}
+.video-hero.block .video-hero-secondary-cta {
+margin-top: 22px;
+gap: 4px;
+font-size: 15.5px;
+}
+.video-hero.block .video-hero-secondary-cta::after {
+font-size: 20px;
+}
+/* No background video = no pause/play control */
+.video-hero.block .video-hero-control {
+display: none;
+}
+/* Full video modal still works */
+.video-hero-modal {
+width: 100vw;
+height: 100vh;
+padding: 0;
+}
+.video-hero-modal-content {
+width: 100%;
+height: 100%;
+}
+.video-hero-modal-video {
+width: 100%;
+height: 100%;
+object-fit: contain;
+}
+.video-hero-modal-close {
+top: 16px;
+right: 16px;
+width: 42px;
+height: 42px;
+font-size: 26px;
+}
 }
