@@ -9,10 +9,6 @@ export default function decorate(block) {
     secondaryCtaRow,
   ] = [...block.children];
 
-  /* =========================================================
-     Extract authored content
-     ========================================================= */
-
   const backgroundVideoUrl =
     backgroundVideoRow?.querySelector('a')?.href
     || backgroundVideoRow?.textContent.trim();
@@ -42,15 +38,9 @@ export default function decorate(block) {
   const secondaryCtaUrl =
     authoredCta?.href;
 
-  /* =========================================================
-     Clear original authoring HTML
-     ========================================================= */
 
   block.innerHTML = '';
 
-  /* =========================================================
-     Background Video
-     ========================================================= */
 
   const backgroundVideo = document.createElement('video');
 
@@ -67,9 +57,6 @@ export default function decorate(block) {
 
   block.append(backgroundVideo);
 
-  /* =========================================================
-     Overlay
-     ========================================================= */
 
   const overlay = document.createElement('div');
 
@@ -77,17 +64,11 @@ export default function decorate(block) {
 
   block.append(overlay);
 
-  /* =========================================================
-     Content wrapper
-     ========================================================= */
 
   const content = document.createElement('div');
 
   content.className = 'video-hero-content';
 
-  /* =========================================================
-     Eyebrow
-     ========================================================= */
 
   if (eyebrow) {
     const eyebrowElement = document.createElement('p');
@@ -98,9 +79,6 @@ export default function decorate(block) {
     content.append(eyebrowElement);
   }
 
-  /* =========================================================
-     Heading
-     ========================================================= */
 
   if (heading) {
     const headingElement = document.createElement('h2');
@@ -111,9 +89,6 @@ export default function decorate(block) {
     content.append(headingElement);
   }
 
-  /* =========================================================
-     Description
-     ========================================================= */
 
   if (description) {
     const descriptionElement = document.createElement('p');
@@ -124,9 +99,6 @@ export default function decorate(block) {
     content.append(descriptionElement);
   }
 
-  /* =========================================================
-     Play Video Button
-     ========================================================= */
 
   const playButton = document.createElement('button');
 
@@ -147,9 +119,6 @@ export default function decorate(block) {
 
   content.append(playButton);
 
-  /* =========================================================
-     Secondary CTA
-     ========================================================= */
 
   if (secondaryCtaLabel && secondaryCtaUrl) {
     const secondaryCta = document.createElement('a');
@@ -162,10 +131,6 @@ export default function decorate(block) {
   }
 
   block.append(content);
-
-  /* =========================================================
-     Background Pause / Play Button
-     ========================================================= */
 
   const controlButton = document.createElement('button');
 
@@ -185,9 +150,6 @@ export default function decorate(block) {
 
   block.append(controlButton);
 
-  /* =========================================================
-     Background Video Pause / Play
-     ========================================================= */
 
   controlButton.addEventListener('click', () => {
     if (backgroundVideo.paused) {
@@ -203,9 +165,6 @@ export default function decorate(block) {
     }
   });
 
-  /* =========================================================
-     Full Video Modal
-     ========================================================= */
 
   const modal = document.createElement('div');
 
@@ -247,10 +206,6 @@ export default function decorate(block) {
 
   document.body.append(modal);
 
-  /* =========================================================
-     Open Modal
-     ========================================================= */
-
   const openModal = () => {
     backgroundVideo.pause();
 
@@ -266,10 +221,6 @@ export default function decorate(block) {
 
     closeButton.focus();
   };
-
-  /* =========================================================
-     Close Modal
-     ========================================================= */
 
   const closeModal = () => {
     modal.classList.remove('is-open');
@@ -288,10 +239,6 @@ export default function decorate(block) {
 
     playButton.focus();
   };
-
-  /* =========================================================
-     Events
-     ========================================================= */
 
   playButton.addEventListener('click', openModal);
 
