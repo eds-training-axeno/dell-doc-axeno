@@ -27,6 +27,7 @@ align-items: center;
 justify-content: center;
 background: #101820;
 }
+
 /* Background Video */
 
 .video-hero.block .video-hero-background {
@@ -39,6 +40,7 @@ object-fit: cover;
 object-position: center;
 border: 0;
 }
+
 /* Video Overlay */
 
 .video-hero.block .video-hero-overlay {
@@ -48,6 +50,7 @@ z-index: 1;
 background: rgb(0 0 0 / 18%);
 pointer-events: none;
 }
+
 /* Hero Content */
 
 .video-hero.block .video-hero-content {
@@ -61,6 +64,7 @@ margin-top: 14px;
 text-align: center;
 color: #fff;
 }
+
 /* Eyebrow */
 
 .video-hero.block .video-hero-eyebrow {
@@ -70,17 +74,20 @@ font-weight: 400;
 line-height: 1;
 color: #fff;
 }
+
 /* Heading */
 
 .video-hero.block .video-hero-heading {
 margin: 0;
 font-family: roboto, sans-serif;
 font-size: 31.5px;
+
 /* font-size: clamp(32px, 3vw, 48px); */
 font-weight: 400 !important;
 line-height: 1;
 color: #fff;
 }
+
 /*   Description */
 
 .video-hero.block .video-hero-description {
@@ -91,6 +98,7 @@ font-weight: 400;
 line-height: 1;
 color: #fff;
 }
+
 /* Play Video Button */
 
 .video-hero.block .video-hero-play {
@@ -100,6 +108,7 @@ justify-content: center;
 gap: 17px;
 min-height: 48px;
 margin-top: 28px;
+
 /* padding: 14px 24px; */
 padding: .6875rem 1.1875rem;
 border: 1px solid #0672ce;
@@ -108,6 +117,7 @@ background: #0672ce;
 color: #fff;
 font: inherit;
 font-size: 1rem;
+
 /* font-weight: 500; */
 cursor: pointer;
 transition: background-color 0.2s ease, border-color 0.2s ease;
@@ -122,6 +132,7 @@ border-color: #0063b8;
 outline: 3px solid #fff;
 outline-offset: 3px;
 }
+
 /* Play icon */
 
 .video-hero.block .video-hero-play-icon {
@@ -135,6 +146,7 @@ border-radius: 50%;
 font-size: 10px;
 line-height: 1;
 }
+
 /* Secondary CTA */
 .video-hero.block .video-hero-secondary-cta {
 display: inline-flex;
@@ -162,6 +174,7 @@ transition: transform 0.2s ease;
 .video-hero.block .video-hero-secondary-cta:hover::after {
 transform: translateX(4px);
 }
+
 /* Background Video Play / Pause Control */
 
 .video-hero.block .video-hero-control {
@@ -196,6 +209,7 @@ outline-offset: 3px;
 .video-hero.block .video-hero-control-icon {
 font-size: 18px;
 }
+
 /* Full Video Modal */
 
 .video-hero-modal {
@@ -209,6 +223,7 @@ padding: 0;
 margin: 0;
 background: #000;
 }
+
 /* Modal open state */
 
 .video-hero-modal.is-open {
@@ -216,6 +231,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
+
 /* Modal Video Wrapper */
 
 .video-hero-modal-content {
@@ -230,6 +246,7 @@ padding: 0;
 overflow: hidden;
 background: #000;
 }
+
 /* Full Video */
 
 .video-hero-modal-video {
@@ -242,6 +259,7 @@ object-fit: contain;
 object-position: center;
 background: #1c1c1c;
 }
+
 /* Modal Close Button */
 
 .video-hero-modal-close {
@@ -272,67 +290,82 @@ background: #f5f6f7;
 outline: 3px solid #0672ce;
 outline-offset: 3px;
 }
+
 /* Prevent page scrolling while modal is open */
 
 body.video-hero-modal-open {
 overflow: hidden;
 }
+
 /* Tablet */
 
 @media (width <= 900px) {
 .video-hero.block {
   min-height: 550px;
 }
+
 .video-hero.block .video-hero-content {
 width: calc(100% - 48px);
 }
+
 .video-hero.block .video-hero-heading {
 font-size: 36px;
 }
+
 .video-hero.block .video-hero-description {
 max-width: 650px;
 font-size: 16px;
 }
+
 .video-hero.block .video-hero-control {
 right: 24px;
 bottom: 24px;
 }
+
 .video-hero-modal-close {
 top: 24px;
 right: 24px;
 }
 }
+
 /* Mobile */
 
 @media (width <= 600px) {
 .video-hero.block {
   min-height: 500px;
 }
+
 .video-hero.block .video-hero-content {
 width: calc(100% - 32px);
 }
+
 .video-hero.block .video-hero-eyebrow {
 margin-bottom: 12px;
 font-size: 15px;
 }
+
 .video-hero.block .video-hero-heading {
 font-size: 28px;
 line-height: 1.2;
 }
+
 .video-hero.block .video-hero-description {
 margin-top: 14px;
 font-size: 15px;
 line-height: 1.4;
 }
+
 .video-hero.block .video-hero-play {
 margin-top: 22px;
 padding: 12px 18px;
 font-size: 16px;
 }
+
 .video-hero.block .video-hero-secondary-cta {
 margin-top: 18px;
 font-size: 15px;
 }
+
 .video-hero.block .video-hero-control {
 right: 16px;
 bottom: 16px;
@@ -340,21 +373,25 @@ min-height: 42px;
 padding: 10px 14px;
 font-size: 14px;
 }
+
 /* Full-screen video modal */
 .video-hero-modal {
 width: 100vw;
 height: 100vh;
 padding: 0;
 }
+
 .video-hero-modal-content {
 width: 100%;
 height: 100%;
 }
+
 .video-hero-modal-video {
 width: 100%;
 height: 100%;
 object-fit: contain;
 }
+
 .video-hero-modal-close {
 top: 16px;
 right: 16px;
@@ -363,6 +400,7 @@ height: 42px;
 font-size: 26px;
 }
 }
+
 /* Reduced Motion */
 
 @media (prefers-reduced-motion: reduce) {
@@ -381,14 +419,17 @@ font-size: 26px;
   align-items: center;
   justify-content: center;
 }
+
 /* Hide background video on mobile */
 .video-hero.block .video-hero-background {
 display: none;
 }
+
 /* Video is hidden, so overlay isn't needed */
 .video-hero.block .video-hero-overlay {
 display: none;
 }
+
 .video-hero.block .video-hero-content {
 position: relative;
 z-index: 2;
@@ -402,6 +443,7 @@ margin-top: 26px;
 padding-bottom: 45px;
 text-align: center;
 }
+
 .video-hero.block .video-hero-eyebrow {
 margin: 0 0 14px;
 font-size: 17px;
@@ -409,6 +451,7 @@ font-weight: 400;
 line-height: 1.2;
 color: #fff;
 }
+
 .video-hero.block .video-hero-heading {
 width: 100%;
 max-width: 330px;
@@ -419,6 +462,7 @@ font-weight: 400 !important;
 line-height: 1.25;
 color: #fff;
 }
+
 .video-hero.block .video-hero-description {
 width: 100%;
 max-width: 330px;
@@ -428,6 +472,7 @@ font-weight: 400;
 line-height: 1.45;
 color: #fff;
 }
+
 .video-hero.block .video-hero-play {
 min-height: 46px;
 margin-top: 24px;
@@ -435,38 +480,46 @@ padding: 12px 20px;
 gap: 10px;
 font-size: 16px;
 }
+
 .video-hero.block .video-hero-play-icon {
 width: 18px;
 height: 18px;
 font-size: 9px;
 }
+
 .video-hero.block .video-hero-secondary-cta {
 margin-top: 22px;
 gap: 4px;
 font-size: 15.5px;
 }
+
 .video-hero.block .video-hero-secondary-cta::after {
 font-size: 20px;
 }
+
 /* No background video = no pause/play control */
 .video-hero.block .video-hero-control {
 display: none;
 }
+
 /* Full video modal still works */
 .video-hero-modal {
 width: 100vw;
 height: 100vh;
 padding: 0;
 }
+
 .video-hero-modal-content {
 width: 100%;
 height: 100%;
 }
+
 .video-hero-modal-video {
 width: 100%;
 height: 100%;
 object-fit: contain;
 }
+
 .video-hero-modal-close {
 top: 16px;
 right: 16px;
