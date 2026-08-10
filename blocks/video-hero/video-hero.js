@@ -9,12 +9,10 @@ export default function decorate(block) {
     secondaryCtaRow,
   ] = [...block.children];
 
-  const backgroundVideoUrl =
-    backgroundVideoRow?.querySelector('a')?.href
+  const backgroundVideoUrl = backgroundVideoRow?.querySelector('a')?.href
     || backgroundVideoRow?.textContent.trim();
 
-  const fullVideoUrl =
-    fullVideoRow?.querySelector('a')?.href
+  const fullVideoUrl = fullVideoRow?.querySelector('a')?.href
     || fullVideoRow?.textContent.trim();
 
   const eyebrow = eyebrowRow?.textContent.trim();
@@ -29,14 +27,11 @@ export default function decorate(block) {
   const playVideoLabel =
     playVideoRow?.textContent.trim() || 'Play Video';
 
-  const authoredCta =
-    secondaryCtaRow?.querySelector('a');
+  const authoredCta = secondaryCtaRow?.querySelector('a');
 
-  const secondaryCtaLabel =
-    authoredCta?.textContent.trim();
+  const secondaryCtaLabel = authoredCta?.textContent.trim();
 
-  const secondaryCtaUrl =
-    authoredCta?.href;
+  const secondaryCtaUrl = authoredCta?.href;
 
 
   block.innerHTML = '';
