@@ -45,7 +45,7 @@ function withRenditionWidth(src, width) {
 
 function createPicture(pictures, index) {
   const picture = document.createElement('picture');
-  picture.className = 'hero-carousel__picture';
+  picture.className = 'hero-carousel-picture';
 
   if (!pictures.length) return picture;
 
@@ -61,7 +61,7 @@ function createPicture(pictures, index) {
   }
 
   const img = document.createElement('img');
-  img.className = 'hero-carousel__image';
+  img.className = 'hero-carousel-image';
   img.src = withRenditionWidth(mobileSrc, MOBILE_RENDITION_WIDTH);
   img.alt = '';
   img.loading = index === 0 ? 'eager' : 'lazy';
@@ -79,7 +79,7 @@ function createCTA(text, url, type) {
   if (!text || !url) return null;
 
   const link = document.createElement('a');
-  link.className = `hero-carousel__cta hero-carousel__cta--${type}`;
+  link.className = `hero-carousel-cta hero-carousel-cta-${type}`;
   link.href = url;
   link.textContent = text;
 
@@ -127,49 +127,49 @@ function parseContent(contentCell) {
 
 function createSlide(slide, index, total) {
   const article = document.createElement('article');
-  article.className = 'hero-carousel__slide';
+  article.className = 'hero-carousel-slide';
 
   article.setAttribute('role', 'group');
   article.setAttribute('aria-roledescription', 'Slide');
   article.setAttribute('aria-label', `Slide ${index + 1} of ${total}`);
   article.setAttribute('aria-hidden', index === 0 ? 'false' : 'true');
-  article.classList.add(`hero-carousel__slide--${slide.theme}`);
+  article.classList.add(`hero-carousel-slide-${slide.theme}`);
 
   const picture = createPicture(slide.pictures, index);
 
   const content = document.createElement('div');
-  content.className = 'hero-carousel__content';
+  content.className = 'hero-carousel-content';
 
   const scrim = document.createElement('div');
-  scrim.className = 'hero-carousel__scrim';
+  scrim.className = 'hero-carousel-scrim';
   content.append(scrim);
 
   const inner = document.createElement('div');
-  inner.className = 'hero-carousel__content-inner';
+  inner.className = 'hero-carousel-content-inner';
 
   if (slide.eyebrow) {
     const eyebrow = document.createElement('p');
-    eyebrow.className = 'hero-carousel__eyebrow';
+    eyebrow.className = 'hero-carousel-eyebrow';
     eyebrow.textContent = slide.eyebrow;
     inner.append(eyebrow);
   }
 
   if (slide.title) {
     const title = document.createElement('h2');
-    title.className = 'hero-carousel__title';
+    title.className = 'hero-carousel-title';
     title.textContent = slide.title;
     inner.append(title);
   }
 
   if (slide.description) {
     const description = document.createElement('div');
-    description.className = 'hero-carousel__description';
+    description.className = 'hero-carousel-description';
     description.textContent = slide.description;
     inner.append(description);
   }
 
   const ctas = document.createElement('div');
-  ctas.className = 'hero-carousel__ctas';
+  ctas.className = 'hero-carousel-ctas';
 
   slide.ctas.slice(0, 2).forEach((cta, i) => {
     const link = createCTA(cta.text, cta.url, i === 0 ? 'primary' : 'secondary');
@@ -186,26 +186,26 @@ function createSlide(slide, index, total) {
 
 function createControls(total) {
   const controls = document.createElement('div');
-  controls.className = 'hero-carousel__controls';
+  controls.className = 'hero-carousel-controls';
 
   const nav = document.createElement('div');
-  nav.className = 'hero-carousel__nav';
+  nav.className = 'hero-carousel-nav';
 
   const prev = document.createElement('button');
-  prev.className = 'hero-carousel__arrow hero-carousel__prev';
+  prev.className = 'hero-carousel-arrow hero-carousel-prev';
   prev.type = 'button';
   prev.setAttribute('aria-label', 'Previous slide');
   prev.innerHTML = '<span aria-hidden="true">←</span>';
 
   const counter = document.createElement('div');
-  counter.className = 'hero-carousel__counter';
+  counter.className = 'hero-carousel-counter';
   counter.setAttribute('aria-live', 'off');
   counter.innerHTML = `
-    <span class="hero-carousel__counter-current">1</span><span aria-hidden="true">/</span><span class="hero-carousel__counter-total">${total}</span>
+    <span class="hero-carousel-counter-current">1</span><span aria-hidden="true">/</span><span class="hero-carousel-counter-total">${total}</span>
   `;
 
   const next = document.createElement('button');
-  next.className = 'hero-carousel__arrow hero-carousel__next';
+  next.className = 'hero-carousel-arrow hero-carousel-next';
   next.type = 'button';
   next.setAttribute('aria-label', 'Next slide');
   next.innerHTML = '<span aria-hidden="true">→</span>';
@@ -213,11 +213,11 @@ function createControls(total) {
   nav.append(prev, counter, next);
 
   const playPause = document.createElement('button');
-  playPause.className = 'hero-carousel__playpause';
+  playPause.className = 'hero-carousel-playpause';
   playPause.type = 'button';
   playPause.innerHTML = `
-    <span class="hero-carousel__playpause-label">Play</span>
-    <span class="hero-carousel__playpause-icon" aria-hidden="true"></span>
+    <span class="hero-carousel-playpause-label">Play</span>
+    <span class="hero-carousel-playpause-icon" aria-hidden="true"></span>
   `;
 
   controls.append(nav, playPause);
@@ -226,18 +226,18 @@ function createControls(total) {
 }
 
 function initialiseCarousel(block, total) {
-  const viewport = block.querySelector('.hero-carousel__viewport');
-  const track = block.querySelector('.hero-carousel__track');
-  const slides = [...block.querySelectorAll('.hero-carousel__slide')];
-  const prev = block.querySelector('.hero-carousel__prev');
-  const next = block.querySelector('.hero-carousel__next');
-  const counter = block.querySelector('.hero-carousel__counter');
-  const counterCurrent = block.querySelector('.hero-carousel__counter-current');
-  const playPause = block.querySelector('.hero-carousel__playpause');
-  const playPauseLabel = block.querySelector('.hero-carousel__playpause-label');
+  const viewport = block.querySelector('.hero-carousel-viewport');
+  const track = block.querySelector('.hero-carousel-track');
+  const slides = [...block.querySelectorAll('.hero-carousel-slide')];
+  const prev = block.querySelector('.hero-carousel-prev');
+  const next = block.querySelector('.hero-carousel-next');
+  const counter = block.querySelector('.hero-carousel-counter');
+  const counterCurrent = block.querySelector('.hero-carousel-counter-current');
+  const playPause = block.querySelector('.hero-carousel-playpause');
+  const playPauseLabel = block.querySelector('.hero-carousel-playpause-label');
 
   if (total <= 1) {
-    block.classList.add('hero-carousel--single');
+    block.classList.add('hero-carousel-single');
     return;
   }
 
@@ -310,7 +310,7 @@ function initialiseCarousel(block, total) {
     slides.forEach((slide) => {
       slide.style.transition = '';
       slide.style.opacity = '';
-      slide.classList.remove('hero-carousel__slide--fade-overlay');
+      slide.classList.remove('hero-carousel-slide-fade-overlay');
     });
   };
 
@@ -336,7 +336,7 @@ function initialiseCarousel(block, total) {
     const outgoing = slides[current];
     const incoming = slides[incomingIndex];
 
-    incoming.classList.add('hero-carousel__slide--fade-overlay', 'is-active');
+    incoming.classList.add('hero-carousel-slide-fade-overlay', 'is-active');
     incoming.setAttribute('aria-hidden', 'false');
     incoming.style.opacity = '0';
 
@@ -359,7 +359,7 @@ function initialiseCarousel(block, total) {
       outgoing.style.opacity = '';
       incoming.style.transition = '';
       incoming.style.opacity = '';
-      incoming.classList.remove('hero-carousel__slide--fade-overlay');
+      incoming.classList.remove('hero-carousel-slide-fade-overlay');
 
       // Reflow before re-enabling the track's transition, same reasoning
       // as above — otherwise the instant jump can get animated instead.
@@ -499,10 +499,10 @@ export default function decorate(block) {
   block.innerHTML = '';
 
   const viewport = document.createElement('div');
-  viewport.className = 'hero-carousel__viewport';
+  viewport.className = 'hero-carousel-viewport';
 
   const track = document.createElement('div');
-  track.className = 'hero-carousel__track';
+  track.className = 'hero-carousel-track';
 
   slides.forEach((slide, index) => {
     track.append(createSlide(slide, index, slides.length));
