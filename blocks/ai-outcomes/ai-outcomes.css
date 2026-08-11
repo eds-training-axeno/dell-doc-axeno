@@ -1,0 +1,494 @@
+/* =========================================
+   MAIN BLOCK
+   ========================================= */
+
+.ai-outcomes {
+  background: #07182b;
+  color: #ffffff;
+
+  padding: 70px 0 45px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   INTRO SECTION
+   ========================================= */
+
+.ai-outcomes-intro {
+  max-width: 1100px;
+
+  margin: 0 auto 55px;
+
+  padding: 0 32px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   HEADING
+   ========================================= */
+
+.ai-outcomes-intro h2 {
+  margin: 0 0 22px;
+
+  color: #ffffff;
+
+  font-size: 42px;
+  line-height: 1.15;
+
+  font-weight: 400;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.ai-outcomes-intro p {
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  color: #d5dfeb;
+
+  font-size: 18px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================
+   CAROUSEL CONTAINER
+   ========================================= */
+
+.ai-outcomes-carousel {
+  position: relative;
+
+  width: calc(100% - 260px);
+
+  max-width: 1050px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   VIEWPORT
+   ========================================= */
+
+.carousel-viewport {
+  width: 100%;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   TRACK
+   ========================================= */
+
+.carousel-track {
+  display: flex;
+
+  gap: 24px;
+
+  transition:
+    transform 0.45s ease;
+
+  will-change: transform;
+}
+
+
+/* =========================================
+   CARD
+   ========================================= */
+
+.outcome-card {
+  flex: 0 0
+    calc((100% - 24px) / 2);
+
+  min-width:
+    calc((100% - 24px) / 2);
+
+  box-sizing: border-box;
+
+  min-height: 360px;
+
+  padding: 28px 24px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background: #2c4054;
+
+  border-radius: 3px;
+}
+
+
+/* =========================================
+   CARD TITLE
+   ========================================= */
+
+.outcome-card h3 {
+  margin: 0 0 14px;
+
+  color: #ffffff;
+
+  font-size: 25px;
+
+  line-height: 1.25;
+
+  font-weight: 400;
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+   ========================================= */
+
+.outcome-card p {
+  margin: 0;
+
+  color: #d3deea;
+
+  font-size: 17px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================
+   CARD LINK
+   ========================================= */
+
+.outcome-card a {
+  margin-top: auto;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  color: #7edcff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-decoration: underline;
+
+  text-underline-offset: 2px;
+}
+
+
+/* =========================================
+   LINK ARROW
+   ========================================= */
+
+.outcome-card .arrow {
+  margin-left: 8px;
+
+  font-size: 18px;
+
+  text-decoration: none;
+}
+
+
+/* =========================================
+   CAROUSEL BUTTONS
+   ========================================= */
+
+.carousel-btn {
+  position: absolute;
+
+  top: 50%;
+
+  z-index: 5;
+
+  width: 48px;
+
+  height: 48px;
+
+  padding: 0;
+
+  border: 1px solid #ffffff;
+
+  border-radius: 0;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transform:
+    translateY(-50%);
+
+  cursor: pointer;
+
+  font-size: 24px;
+
+  line-height: 1;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+/* =========================================
+   PREVIOUS
+   ========================================= */
+
+.carousel-btn.prev {
+  left: -65px;
+}
+
+
+/* =========================================
+   NEXT
+   ========================================= */
+
+.carousel-btn.next {
+  right: -65px;
+}
+
+
+/* =========================================
+   BUTTON HOVER
+   ========================================= */
+
+.carousel-btn:hover:not(:disabled) {
+  background: #ffffff;
+
+  color: #07182b;
+}
+
+
+/* =========================================
+   DISABLED BUTTON
+   ========================================= */
+
+.carousel-btn:disabled {
+  opacity: 0.35;
+
+  cursor: default;
+}
+
+
+/* =========================================
+   DOT CONTAINER
+   ========================================= */
+
+.carousel-dots {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+
+/* =========================================
+   DOT
+   ========================================= */
+
+.carousel-dots .dot {
+  width: 7px;
+
+  height: 7px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  opacity: 0.8;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   ACTIVE DOT
+   ========================================= */
+
+.carousel-dots .dot.active {
+  width: 34px;
+
+  border-radius: 10px;
+
+  background: #1686d9;
+
+  opacity: 1;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1024px) {
+
+  .ai-outcomes {
+    padding: 60px 0 45px;
+  }
+
+
+  .ai-outcomes-intro {
+    margin-bottom: 45px;
+
+    padding: 0 28px;
+  }
+
+
+  .ai-outcomes-intro h2 {
+    font-size: 36px;
+  }
+
+
+  .ai-outcomes-intro p {
+    font-size: 17px;
+  }
+
+
+  .ai-outcomes-carousel {
+    width: calc(100% - 180px);
+  }
+
+
+  .carousel-btn.prev {
+    left: -55px;
+  }
+
+
+  .carousel-btn.next {
+    right: -55px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .ai-outcomes {
+    padding: 55px 0 40px;
+  }
+
+
+  .ai-outcomes-intro {
+    padding: 0 24px;
+
+    margin-bottom: 40px;
+  }
+
+
+  .ai-outcomes-intro h2 {
+    font-size: 32px;
+  }
+
+
+  .ai-outcomes-intro p {
+    font-size: 16px;
+  }
+
+
+  .ai-outcomes-carousel {
+    width: calc(100% - 100px);
+  }
+
+
+  /*
+   * One card on mobile
+   */
+
+  .outcome-card {
+    flex: 0 0 100%;
+
+    min-width: 100%;
+
+    min-height: 330px;
+
+    padding: 28px 22px;
+  }
+
+
+  .outcome-card h3 {
+    font-size: 23px;
+  }
+
+
+  .outcome-card p {
+    font-size: 16px;
+  }
+
+
+  .carousel-btn {
+    width: 40px;
+
+    height: 40px;
+
+    font-size: 20px;
+  }
+
+
+  .carousel-btn.prev {
+    left: -48px;
+  }
+
+
+  .carousel-btn.next {
+    right: -48px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+  .ai-outcomes-intro h2 {
+    font-size: 28px;
+  }
+
+
+  .ai-outcomes-carousel {
+    width: calc(100% - 80px);
+  }
+
+
+  .carousel-btn.prev {
+    left: -42px;
+  }
+
+
+  .carousel-btn.next {
+    right: -42px;
+  }
+}
