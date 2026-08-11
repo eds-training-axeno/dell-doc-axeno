@@ -1,0 +1,212 @@
+.tabbed-menu {
+  background: #0a0e14!important;
+  color: #fff;
+  font-family: roboto,Arial,Helvetica,sans-serif !important;
+}
+
+.tabbed-menu .tabbed-menu-heading {
+  padding: 60px 24px;
+  margin: 0 8%;
+}
+
+.tabbed-menu .tabbed-menu-heading h2 {
+    font-size: 40px;
+    font-weight: 100;
+    font-family: inherit;
+    line-height: 48px;
+    text-align: center;
+}
+
+.tabbed-menu .tabbed-menu-heading h2 strong {
+    font-weight: 700;
+}
+
+.tabbed-menu .tabs-list {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.tabbed-menu .tabs-list ul {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  justify-content: safe center!important;
+  scrollbar-width: none!important;
+  overflow-x: auto!important;
+}
+
+.tabbed-menu .tabs-list li {
+  flex: 0 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+.tabbed-menu .tabs-list .tabs-tab {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 160px;
+  min-width: 115px;
+  padding: 1rem 0rem;
+  border: 0;
+  margin-right: 16px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: .005em;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tabbed-menu .tabs-list .tabs-tab::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+}
+
+.tabbed-menu .tabs-list .tabs-tab[aria-selected='true'] {
+  color: #97dcf4 !important;
+}
+
+.tabbed-menu .tabs-list .tabs-tab[aria-selected='true']::before {
+  background-color: #97dcf4 !important;
+}
+
+.tabbed-menu .tab-panels {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.tabbed-menu .tab-panel-wrapper[aria-hidden='true'] {
+  display: none;
+}
+
+.tabbed-menu .tab-panel {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.tabbed-menu .tab-panel .tab-panel-sec-1 {
+  display: flex;
+  align-items: center;
+  padding: 20px 32px 20px 0;
+  border-right: 1px solid #40586d;
+}
+
+.tabbed-menu .tab-panel .tab-panel-sec-1 img {
+  width: 69px;
+  height: 52px;
+}
+
+.tabbed-menu .tab-panel-sec-1 h3 {
+  padding-left: 24px;
+  margin: 0;
+  width: 190px;
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+}
+
+.tabbed-menu .tab-panel-sec-2 {
+  padding: 16px 19.5px 16px 32px;
+}
+
+.tabbed-menu .tab-panel-sec-2 p {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.tabbed-menu .tab-panel-sec-2 a {
+  background-color: transparent!important;
+  color: #fff!important;
+  border-color: #fff!important;
+  border: 2px solid #fff!important;
+  text-decoration: none;
+  padding: 8px 12px 8px 16px;
+  margin-right: 32px!important;
+  margin-bottom: 8px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.tabbed-menu .tab-panel-sec-2 a:hover {
+  background-color: #f5f6f7!important;
+  color: #6e6e6e!important;
+}
+
+.tabbed-menu .tab-panel-sec-2 a .link-icon {
+  padding-left: 12px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.tabbed-menu .tab-panel-sec-2 a .link-icon::before {
+  content: "→";
+}
+
+@media (min-width: 1024px) {
+  .tabbed-menu .tabs-list {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+
+  .tabbed-menu .tab-panel {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabbed-menu .tabbed-menu-heading h2 {
+    font-size: 32px;
+  }
+
+  .tabbed-menu .tab-panel {
+    flex-direction: column;
+  }
+
+  .tabbed-menu .tab-panel-sec-1 {
+    border-right: none !important;
+    border-bottom: 2px solid #40586d;
+  }
+
+  .tabbed-menu .tab-panel .tab-panel-sec-1 img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .tabbed-menu .tab-panel-sec-1 h3 {
+    width: auto;
+    font-size: 21px;
+  }
+
+  .tabbed-menu .tab-panel-sec-2 {
+    padding-left: 0px;
+  }
+
+  .tabbed-menu .tab-panel-sec-2 p {
+    font-size: 14px;
+  }
+}
