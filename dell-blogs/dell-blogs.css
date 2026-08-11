@@ -1,0 +1,214 @@
+/* Section styling (via Section Metadata style: dell-blogs) */
+.section.dell-blogs {
+  background-color: #0b2d69;
+  color: #fff;
+  padding: 64px 0;
+  margin: 0;
+}
+
+/* Widen the content container for this section only (Dell uses a wider grid) */
+.section.dell-blogs > div {
+  max-width: 1300px;
+}
+
+/* Use a system font stack for this section — reads lighter than Roboto on Windows */
+.section.dell-blogs,
+.section.dell-blogs h1,
+.section.dell-blogs h2,
+.section.dell-blogs h3,
+.section.dell-blogs h4,
+.section.dell-blogs h5,
+.section.dell-blogs h6,
+.section.dell-blogs p,
+.section.dell-blogs a {
+  font-family: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Use the non-condensed body font for this section so type reads wider (closer to Dell) */
+.section.dell-blogs h1,
+.section.dell-blogs h2,
+.section.dell-blogs h3,
+.section.dell-blogs h4,
+.section.dell-blogs h5,
+.section.dell-blogs h6,
+.section.dell-blogs p {
+  color: #fff;
+  font-family: var(--body-font-family);
+}
+
+/* Intro wrapper: eyebrow + main title.
+   Do NOT override max-width/margin here so it stays aligned with the block grid. */
+.section.dell-blogs > .default-content-wrapper:first-of-type {
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.section.dell-blogs > .default-content-wrapper:first-of-type > * {
+  margin: 0;
+}
+
+.section.dell-blogs > .default-content-wrapper:first-of-type > *:first-child {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  opacity: 0.95;
+  margin-bottom: 8px;
+}
+
+.section.dell-blogs > .default-content-wrapper:first-of-type > *:last-child {
+  font-size: 2.25rem;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 900px) {
+  .section.dell-blogs > .default-content-wrapper:first-of-type > *:last-child {
+    font-size: 3rem;
+  }
+}
+
+/* Trailing wrapper: bottom link row */
+.section.dell-blogs > .default-content-wrapper:last-of-type {
+  margin-top: 48px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.section.dell-blogs > .default-content-wrapper:last-of-type p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 0;
+}
+
+.section.dell-blogs > .default-content-wrapper:last-of-type a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section.dell-blogs > .default-content-wrapper:last-of-type a::after {
+  content: '→';
+  transition: transform 0.2s ease;
+}
+
+.section.dell-blogs > .default-content-wrapper:last-of-type a:hover::after {
+  transform: translateX(4px);
+}
+
+/* Block: grid of cards */
+.dell-blogs.block ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .dell-blogs.block ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .dell-blogs.block ul {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+}
+
+.dell-blogs .dell-blogs-card {
+  background-color: #020c1e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.dell-blogs .dell-blogs-card--linked {
+  cursor: pointer;
+}
+
+.dell-blogs .dell-blogs-card--linked:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.dell-blogs .dell-blogs-card--linked:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.dell-blogs .dell-blogs-card-image {
+  line-height: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.dell-blogs .dell-blogs-card-image picture,
+.dell-blogs .dell-blogs-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.dell-blogs .dell-blogs-card--linked:hover .dell-blogs-card-image img {
+  transform: scale(1.05);
+}
+
+.dell-blogs .dell-blogs-card-body {
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 16px;
+  font-family: var(--body-font-family);
+}
+
+.dell-blogs .dell-blogs-card-title {
+  font-family: inherit;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.35;
+  margin: 0;
+  color: #fff;
+  letter-spacing: -0.005em;
+}
+
+.dell-blogs .dell-blogs-card-cta {
+  margin-top: auto;
+}
+
+.dell-blogs .dell-blogs-card-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dell-blogs .dell-blogs-card-link::after {
+  content: '→';
+  transition: transform 0.2s ease;
+}
+
+.dell-blogs .dell-blogs-card--linked:hover .dell-blogs-card-link::after {
+  transform: translateX(4px);
+}
