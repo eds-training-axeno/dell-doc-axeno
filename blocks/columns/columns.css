@@ -6,7 +6,21 @@
 .columns img {
   width: 100%;
 }
-
+/* Columns background color-section LAPTOPS*/
+.columns  {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin: 48px auto;
+  color: #fff;
+   -animation: rgba(0, 42, 88, .08);
+  background-color: #0a0e14;
+  box-sizing: inherit;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: .005em;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
 .columns > div > div {
   order: 1;
 }
