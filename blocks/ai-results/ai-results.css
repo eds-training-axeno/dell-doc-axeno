@@ -1,0 +1,202 @@
+.ai-results-wrapper{
+    max-width: 1500px !important;
+    margin: 0 auto;
+    padding: unset !important;
+}
+.ai-results {
+    background: linear-gradient(180deg, #293b4d 0, #0a0e14 148.26%);
+    color: #ebf1f6;
+    padding: 96px 120px 64px;
+}
+
+.ai-results .ai-results-content {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.ai-results .ai-results-heading {
+    margin: 0 auto 32px;
+    font-size: 48px;
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    text-align: center;
+    color: rgb(237 244 249 / 90%);
+    font-weight: 400;
+}
+
+.ai-results .ai-results-heading .ai-results-heading-highlight{
+    font-weight: 700 !important;
+    color: #c5d4e3;
+}
+
+.ai-results .ai-results-heading .ai-results-heading-rest {
+    font-family: var(--body-font-family);
+    font-weight: 400;
+}
+
+
+.ai-results .ai-results-description {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color:#ebf1f6;
+    font-weight: 400;
+}
+
+.ai-results .ai-results-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 36px 28px;
+    align-items: start;
+}
+
+.ai-results .ai-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding-top: 48px;
+    gap: 12px;
+}
+
+.ai-results .ai-result-title {
+    font-size: 24px;
+    color: #edf3f8;
+    font-weight: 400;
+}
+
+.ai-results .ai-result-title p ,
+.ai-results .ai-result-prefix p
+{
+    margin: 0;
+}
+
+.ai-results .ai-result-prefix {
+    margin-bottom: 14px;
+    font-size: clamp(1.2rem, 1.4vw, 2.2rem);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: rgb(237 244 249 / 78%);
+    font-weight: 700;
+}
+
+.ai-results .ai-result-value {
+    font-size: 76px;
+    line-height: 130px;
+    letter-spacing: -0.08em;
+    font-weight: 400;
+    color: #ebf1f6;
+}
+
+.ai-results .ai-result-footnote {
+    position: relative;
+    margin-top: 18px;
+    font-size: clamp(1.1rem, 1.4vw, 2rem);
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+    color: rgb(237 244 249 / 80%);
+    font-weight: 700;
+}
+
+.ai-results .ai-result-info {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    margin-left: 6px;
+    border: 1px solid rgb(45 144 214 / 70%);
+    border-radius: 50%;
+    font-size: 0.75rem;
+    line-height: 1;
+    color: rgb(45 144 214 / 70%);
+    font-weight: 700;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.ai-results .ai-result-footnote-has-source .ai-result-info:focus-visible {
+    outline: 2px solid #ebf1f6;
+    outline-offset: 2px;
+}
+
+.ai-results .ai-result-footnote-has-source{
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.ai-results .ai-result-popover {
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: min(320px, 80vw);
+    padding: 16px 40px 16px 16px;
+    transform: translateX(-50%);
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 30%);
+    color: #1a2a3a;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.ai-results .ai-result-popover::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #fff;
+}
+
+.ai-results .ai-result-popover-url {
+    margin: 0;
+    overflow-wrap: anywhere;
+    color: #1a2a3a !important;
+}
+
+.ai-results a.ai-result-popover-url {
+    text-decoration: underline;
+}
+
+.ai-results .ai-result-popover-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    padding: 0;
+    background: transparent;
+    color: #1a2a3a;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .ai-results {
+        padding: 40px 18px 56px;
+    }
+
+    .ai-results .ai-results-metrics {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .ai-results .ai-results-description {
+        margin-bottom: 40px;
+    }
+}
